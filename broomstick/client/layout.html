@@ -1,5 +1,9 @@
 <template name="layout">
 	{{#if currentUser}}
-		hello world 
+		{{#if role}}
+		{{> admin}}
+		{{else}}
+		{{> endUser}}
+		{{/if}}
 	{{/if}}
 </template>
