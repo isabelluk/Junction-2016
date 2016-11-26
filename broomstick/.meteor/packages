@@ -25,3 +25,5 @@ session
 robins10:sb-admin-2-theme
 raix:handlebar-helpers
 iron:router
+http
+percolate:synced-cron
