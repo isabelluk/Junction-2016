@@ -1,3 +1,18 @@
 <template name="endUser">
 	<p>user</p>
+	{{#if $.Session.equals 'pageState' 'empty_desk'}}
+	<p>empty desk</p>
+	<p id="home">Back</p>
+	{{else}}
+		{{#if $.Session.equals 'pageState' 'ticketing'}}
+		<p>ticketing</p>
+		<p id="home">Back</p>
+		{{else}}
+		<ul>
+			<li id="empty_desk">Find empty desk</li>
+			<li id="ticketing">Ticket system</li>
+		</ul>
+		{{/if}}
+	{{/if}}
+
 </template>
