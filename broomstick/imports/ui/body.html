@@ -1,0 +1,73 @@
+<body>
+  <div>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                      mdl-textfield--floating-label mdl-textfield--align-right">
+          </div>
+        </div>
+      </header>
+
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Broomstick</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Tickets</a>
+          <a class="mdl-navigation__link" href="">Office</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+      </div>
+
+      <main class="mdl-layout__content">
+
+        <dialog id="dialog-add-card" class="mdl-dialog">
+      		<form class="mdl-dialog__content">
+            <div class="mdl-textfield mdl-js-textfield">
+      				<textarea id="text" class="mdl-textfield__input" type="text"
+      					rows="2" placeholder="Description..."></textarea>
+      				<label class="mdl-textfield__label" for="text"></label>
+      			</div>
+            <div id="pictureContainer">
+              <video style="display:none;" autoplay="true" id="videoElement">
+              </video>
+              <canvas id="canvas" style="display:none;"></canvas>
+            </div>
+      			<button id="add-photo" class="mdl-button mdl-js-button mdl-button--raised">
+              <i class="material-icons" style="padding-right:10px">add_a_photo</i> Add Photo
+            </button>
+
+      		</form>
+      		<div class="mdl-dialog__actions">
+      			<button id="add-card" class="mdl-button mdl-button--colored">Create Ticket</button>
+      			<button id="close" class="mdl-button">Close</button>
+      		</div>
+      	</dialog>
+
+      	<div class="container-card">
+      		{{#each cards}}
+      			<div class="flex-card mdl-card mdl-shadow--2dp">
+      				<div class="mdl-card__supporting-text"><p>{{text}}</p></div>
+              <img class="picture" src="{{picture}}" alt="photo"/>
+      				<div class="mdl-card__actions mdl-card--border">
+      					<a class="mdl-button mdl-js-button delete">
+      						Delete
+      					</a>
+      					<a class="mdl-button mdl-button--colored mdl-js-button open-card">
+      						Open
+      					</a>
+      				</div>
+      			</div>
+      		{{/each}}
+      	</div>
+
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored button-dialog-add-card">
+      		<i class="material-icons">add</i>
+      	</button>
+
+      </main>
+
+    </div>
+  </div>
+</body>
