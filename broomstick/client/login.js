@@ -9,9 +9,9 @@ Template.login.events({
 				Session.set('errorMessage', err.message);
 			}
 		});
-	}
+	},
 
-	errorMessage: function() {
+	'errorMessage': function() {
 		return Session.get('errorMessage');
-	}
+	},
 });
