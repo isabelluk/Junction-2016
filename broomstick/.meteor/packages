@@ -24,3 +24,5 @@ accounts-ui
 session
 robins10:sb-admin-2-theme
 raix:handlebar-helpers
+http
+percolate:synced-cron
