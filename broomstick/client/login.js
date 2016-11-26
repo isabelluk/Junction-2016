@@ -1,14 +1,17 @@
 Template.login.events({
 	'submit form': function(event){
 		event.preventDefault();
-		var usernameVar = event.target.txt_username.value;
+		var emailVar = event.target.txt_email.value;
 		var passwordVar  = event.target.txt_password.value;
 		console.log("Form submitted.");
-		Meteor.loginWithPassword(usernameVar, passwordVar, function(err) {
-			if (err) {
-				Session.set('errorMessage', err.message);
-			}
-		});
+		Meteor.loginWithPassword(emailVar, passwordVar, function(error){
+            if (Meteor.user()) {
+               console.log(Meteor.userId());
+               Router.go('/dashboard');
+            } else {
+               console.log("ERROR: " + error.reason);
+            }
+         });
 	},
 
 	'errorMessage': function() {
