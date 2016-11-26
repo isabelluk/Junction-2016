@@ -1,1 +1,23 @@
 /* CSS declarations go here */
+body
+{
+	background-image: url("img/login_back.jpg");
+}
+
+
+#login_box
+{
+	color: #2196F3;
+	font-family: 'Nixie One', cursive;
+	margin: 10em auto;
+	box-shadow:  0 0 10px #999;
+	background-color: rgba(255,255,255,0.5);
+	
+}
+
+#logo_icon
+{
+	display: block;
+	width :70%;
+	margin: auto;
+}
