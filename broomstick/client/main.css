@@ -14,7 +14,7 @@ body
 {
 	color: #2196F3;
 	font-family: 'Nixie One', cursive;
-	margin: 10em auto;
+	margin: 7em auto;
 	box-shadow:  0 0 10px #999;
 	background-color: rgba(255,255,255,0.5);
 	
@@ -25,4 +25,21 @@ body
 	display: block;
 	width :70%;
 	margin: auto;
+}
+
+#emptyDesks
+{
+	padding: 10px;
+}
+
+#myCanvas, #floor_plan
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#floor_plan
+{
+	box-shadow:  0 0 20px #999;
 }

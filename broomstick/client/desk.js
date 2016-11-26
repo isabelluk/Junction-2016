@@ -2,6 +2,7 @@ function draw() {
 	canvas = document.getElementById('myCanvas');
 	ctx = canvas.getContext('2d');
 	var img = new Image();
+	img.id = "floor_plan";
 	img.src = "img/floor_plan.png";
 
 	// Make sure the image is loaded first otherwise nothing will draw.

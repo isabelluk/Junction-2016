@@ -1,4 +1,15 @@
 <template name="desk">
-	<p>Last updated: {{emptyDesks}}</p>
-	<canvas id='myCanvas' width="600" height="600"></canvas>
+	{{ > navigation}}
+	<div id="page-wrapper">
+		<div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Find Empty Desk</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+         </div>
+		<div id="emptyDesks">
+			<p>Available Desks: {{emptyDesks}}</p>
+			<canvas id='myCanvas' width="600" height="600"></canvas>
+		</div>
+	</div>
 </template>
