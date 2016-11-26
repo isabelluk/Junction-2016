@@ -9,6 +9,7 @@ Template.login.events({
                console.log(Meteor.userId());
                Router.go('/dashboard');
             } else {
+               Session.set('errorMessage',error.reason);
                console.log("ERROR: " + error.reason);
             }
          });

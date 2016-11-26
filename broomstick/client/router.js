@@ -10,3 +10,7 @@ Router.route('/register', function () {
 Router.route('/dashboard', function (){
 	this.render('dashboard');
 })
+
+Router.route('/profile', function () {
+	this.render('profile');
+})

@@ -38,11 +38,19 @@ Template.register.events({
 
         Accounts.createUser(options , function(err){
             if(Meteor.user())
+            {
                 console.log(Meteor.userId);
+                Router.go('/');
+            }
             else
+            {
                 console.log(err);
+                Session.set('errorMessageR',err.reason);
+            }
         });
 
-        Router.go('/');
-    }
+    },
+    'errorMessageR': function() {
+        return Session.get('errorMessageR');
+    },
 });

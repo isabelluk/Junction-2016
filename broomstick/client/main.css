@@ -1,6 +1,11 @@
 /* CSS declarations go here */
 body
 {
+	font-family: 'Nixie One', cursive;
+}
+
+#login_back
+{
 	background-image: url("img/login_back.jpg");
 }
 
