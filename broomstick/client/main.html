@@ -3,6 +3,10 @@
 </head>
 
 <body>
-	{{> login}}
-	{{> layout}}
+	{{#if currentUser}}
+        {{> dashboard}}
+    {{else}}
+        <!-- {{> register}} -->
+        {{> login}}
+    {{/if}}
 </body>
