@@ -14,3 +14,7 @@ Router.route('/dashboard', function (){
 Router.route('/profile', function () {
 	this.render('profile');
 })
+
+Router.route('/desk',function(){
+	this.render('desk');
+})
